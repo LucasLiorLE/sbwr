@@ -490,10 +490,17 @@ document.addEventListener("DOMContentLoaded", function() {
         saveCollapsedState();
     };
 
-     fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("http://eu-ro-01.wisp.uno:9761/api/sbwr-records"))
+    fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("http://eu-ro-01.wisp.uno:9761/api/sbwr-records"))
         .then(res => res.json())
         .then(data => {
-            recordsData = data;
+            let actualData = {};
+            try {
+                actualData = JSON.parse(data.contents);
+            } catch (e) {
+                console.error('Failed to parse records data:', e);
+                throw new Error('Invalid data format received');
+            }
+            recordsData = actualData;
             loadingIndicator.style.display = 'none';
             container.style.display = 'block';
             renderRecords();
