@@ -490,7 +490,7 @@ document.addEventListener("DOMContentLoaded", function() {
         saveCollapsedState();
     };
 
-    fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("http://eu-ro-01.wisp.uno:9761/api/sbwr-records"))
+    fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("http://eu-ro-01.wisp.uno:9761/api/sbwr/get-records"))
         .then(res => res.json())
         .then(data => {
             let actualData = {};
