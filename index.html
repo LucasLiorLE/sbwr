@@ -29,6 +29,7 @@
             background-color: var(--bg-light);
             color: var(--text-light);
             min-height: 100vh;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         
         [data-bs-theme="dark"] body {
@@ -42,6 +43,7 @@
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 2rem;
+            transition: color 0.3s ease;
         }
         
         @media (max-width: 768px) {
@@ -55,6 +57,7 @@
             background: var(--card-bg-light);
             border: 1px solid var(--border-light);
             margin-bottom: 1rem;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
         
         [data-bs-theme="dark"] .card {
@@ -76,6 +79,7 @@
             align-items: center;
             justify-content: space-between;
             border-bottom: 1px solid var(--border-light);
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
         
         [data-bs-theme="dark"] .card-header {
@@ -108,6 +112,7 @@
             font-weight: 500;
             font-size: 0.875rem;
             padding: 0.75rem 1rem;
+            transition: background-color 0.3s ease;
         }
         
         [data-bs-theme="dark"] .table th {
@@ -118,6 +123,7 @@
             vertical-align: middle;
             padding: 0.75rem 1rem;
             border-color: var(--border-light);
+            transition: border-color 0.3s ease;
         }
         
         .table tbody tr:hover {
@@ -145,6 +151,7 @@
             padding: 0.75rem 1rem;
             font-size: 1rem;
             width: 100%;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
         
         [data-bs-theme="dark"] #searchBox {
@@ -162,7 +169,7 @@
         .theme-toggle {
             position: fixed;
             top: 1rem;
-            right: 1rem;
+            right: 7rem;
             z-index: 1000;
             border-radius: 6px;
             width: 40px;
@@ -174,6 +181,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
         
         [data-bs-theme="dark"] .theme-toggle {
@@ -190,10 +198,82 @@
             background-color: var(--hover-bg-dark);
         }
         
+        .discord-button {
+            position: fixed;
+            top: 1rem;
+            right: 4rem;
+            z-index: 1000;
+            border-radius: 6px;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border-light);
+            background: #5865f2;
+            color: white;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .discord-button:hover {
+            background: #4752c4;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        [data-bs-theme="dark"] .discord-button {
+            border-color: var(--border-dark);
+        }
+        
+        .roblox-button {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1000;
+            border-radius: 6px;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border-light);
+            background: #335fff;
+            color: white;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .roblox-button:hover {
+            background: #0080cc;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        [data-bs-theme="dark"] .roblox-button {
+            border-color: var(--border-dark);
+        }
+        
+        .roblox-icon {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        .roblox-button svg {
+            border-radius: 6px;
+            width: 24px;
+            height: 24px;
+            display: block;
+        }
+        
         .roblox-link {
             color: var(--primary-color);
             text-decoration: none;
             font-weight: 500;
+            transition: color 0.3s ease;
         }
         
         .roblox-link:hover {
@@ -207,6 +287,7 @@
             align-items: center;
             height: 300px;
             font-size: 1rem;
+            transition: color 0.3s ease;
         }
         
         .custom-spinner {
@@ -217,6 +298,7 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
             margin-bottom: 1rem;
+            transition: border-color 0.3s ease;
         }
         
         @keyframes spin {
@@ -229,12 +311,14 @@
             padding: 2rem;
             color: #656d76;
             font-style: italic;
+            transition: color 0.3s ease;
         }
         
         .search-highlight {
             background: #fff8c5;
             border-radius: 2px;
             padding: 1px 2px;
+            transition: background-color 0.3s ease;
         }
         
         [data-bs-theme="dark"] .search-highlight {
@@ -245,6 +329,7 @@
             border-radius: 6px;
             font-weight: 500;
             border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
         }
         
         [data-bs-theme="dark"] .btn {
@@ -253,6 +338,32 @@
         
         .container {
             max-width: 1200px;
+        }
+        
+        .disclaimer {
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+            border-top: 1px solid var(--border-light);
+            color: #656d76;
+            font-size: 0.875rem;
+            font-style: italic;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        [data-bs-theme="dark"] .disclaimer {
+            border-top-color: var(--border-dark);
+            color: #7d8590;
+        }
+        
+        .disclaimer-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .disclaimer-link:hover {
+            text-decoration: underline;
         }
         
         @media (max-width: 768px) {
@@ -265,6 +376,28 @@
                 padding: 0.5rem 0.75rem;
                 font-size: 0.875rem;
             }
+            
+            .disclaimer {
+                padding: 1.5rem 1rem;
+                margin-top: 2rem;
+            }
+            
+            .theme-toggle {
+                right: 6rem;
+                width: 36px;
+                height: 36px;
+            }
+            
+            .discord-button {
+                right: 3rem;
+                width: 36px;
+                height: 36px;
+            }
+            
+            .roblox-button {
+                width: 36px;
+                height: 36px;
+            }
         }
     </style>
 </head>
@@ -272,6 +405,17 @@
     <button class="btn theme-toggle" id="themeToggle">
         <i class="bi bi-moon-fill"></i>
     </button>
+    
+    <a href="https://discord.gg/knzkVdCVKv" target="_blank" class="discord-button" title="Join Discord Server">
+        <i class="bi bi-discord"></i>
+    </a>
+    
+    <a href="https://www.roblox.com/games/6403373529/Slap-Battles" target="_blank" class="roblox-button" title="Play Slap Battles">
+        <svg class="roblox-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="120,60 60,392 392,452 452,120" fill="#fff"/>
+            <rect x="210" y="210" width="92" height="92" transform="rotate(14 256 256)" fill="#335fff"/>
+        </svg>
+    </a>
     
     <div class="container my-5">
         <h1 class="main-title">Slap Battles World Records</h1>
@@ -286,7 +430,11 @@
         </div>
         
         <div id="recordsContainer" style="display: none;">
-            <!-- Records will be dynamically inserted here -->
+
+        </div>
+        
+        <div class="disclaimer">
+            Not affiliated with Slap Battles (unofficial site) made by <a href="https://www.roblox.com/users/1919501120/profile" target="_blank" class="disclaimer-link">LucasLiorLE</a>
         </div>
     </div>
 
@@ -300,7 +448,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
 
-    // Theme management
     const savedTheme = localStorage.getItem('theme') || 'light';
     const savedCollapsed = JSON.parse(localStorage.getItem('collapsedCategories') || '[]');
     collapsedCategories = new Set(savedCollapsed);
@@ -325,7 +472,6 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem('collapsedCategories', JSON.stringify([...collapsedCategories]));
     }
 
-    // Roblox API to get user ID with caching
     const userIdCache = new Map();
     async function getRobloxUserId(username) {
         if (userIdCache.has(username)) {
@@ -387,13 +533,11 @@ document.addEventListener("DOMContentLoaded", function() {
             const records = categoryData.records || [];
             const headers = categoryData.headers || {username: "Username", "time": "Time", evidence: "Evidence"};
             
-            // Filter logic: show category if category name matches OR any username matches
             const categoryMatches = !filter || category.toLowerCase().includes(filterLower);
             const matchingRecords = filter ? records.filter(rec => 
                 rec.username && rec.username.toLowerCase().includes(filterLower)
             ) : records;
             
-            // Show category if it matches or has matching records
             if (!categoryMatches && matchingRecords.length === 0) continue;
 
             const isCollapsed = collapsedCategories.has(category);
@@ -516,6 +660,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     searchBox.addEventListener("input", function() {
+        renderRecords(this.value);
+    });
+});
+</script>
+</body>
+</html>
         renderRecords(this.value);
     });
 });
