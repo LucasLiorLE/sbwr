@@ -808,7 +808,7 @@
             saveCollapsedState();
         };
 
-        fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("http://eu-ro-01.wisp.uno:9761/api/sbwr/get-records"))
+        fetch("https://api.allorigins.win/get?disableCache=true&url=" + encodeURIComponent("http://eu-ro-01.wisp.uno:9761/api/sbwr/get-records"))
             .then(res => res.json())
             .then(data => {
                 let actualData = {};
@@ -828,7 +828,7 @@
                 loadingIndicator.innerHTML = `
                     <div class="text-danger">
                         <i class="bi bi-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
-                        Failed to load records. Please try again later.
+                        Failed to load records. Please try again later. More reliable for loading: http://eu-ro-01.wisp.uno:9761/sbwr
                     </div>
                 `;
             });
