@@ -194,7 +194,7 @@
     .discord-button {
         position: fixed;
         top: 1rem;
-        right: 4rem;
+        right: 7rem;
         z-index: 1000;
         border-radius: 6px;
         width: 40px;
@@ -504,6 +504,33 @@
             width: 100%;
         }
     }
+
+    .sheets-button {
+        position: fixed;
+        top: 1rem;
+        right: 4rem;
+        z-index: 1000;
+        border-radius: 6px;
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--border-light);
+        background: #0F9D58;
+        color: #fff;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+    .sheets-button:hover {
+        background: #0c7c43;
+        color: #fff;
+        transform: scale(1.05);
+    }
+    [data-bs-theme="dark"] .sheets-button {
+        border-color: var(--border-dark);
+    }
 </style>
 <html lang="en" data-bs-theme="light">
 <head>
@@ -514,21 +541,32 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
-    <button class="btn theme-toggle" id="themeToggle">
+    <button class="btn theme-toggle" id="themeToggle" style="right: 10rem;">
         <i class="bi bi-moon-fill"></i>
     </button>
     
-    <a href="https://discord.gg/knzkVdCVKv" target="_blank" class="discord-button" title="Join Discord Server">
+    <a href="https://discord.gg/knzkVdCVKv" target="_blank" class="discord-button" title="Join Discord Server" style="right: 7rem;">
         <i class="bi bi-discord"></i>
     </a>
     
+    <a href="https://docs.google.com/spreadsheets/d/1B4smOTQ1ZYjhb3JMXQAYWeikb2Sm3P56UBo43ComjYw/edit?gid=0#gid=0"
+       target="_blank" class="sheets-button" title="View Offical Sheet">
+    <svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="10" width="28" height="2.5" rx="1" fill="#fff"/>
+        <rect x="10" y="10" width="2.5" height="30" rx="1" fill="#fff"/>
+        <rect x="10" y="24" width="28" height="2.5" rx="1" fill="#fff"/>
+        <rect x="36" y="10" width="2.5" height="30" rx="1" fill="#fff"/>
+        <rect x="10" y="38" width="28" height="2.5" rx="1" fill="#fff"/>
+        <rect x="23" y="10" width="2.5" height="30" rx="1" fill="#fff"/>
+    </svg>
+    </a>
+
     <a href="https://www.roblox.com/games/6403373529/Slap-Battles" target="_blank" class="roblox-button" title="Play Slap Battles">
         <svg class="roblox-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
             <polygon points="120,60 60,392 392,452 452,120" fill="#fff"/>
             <rect x="210" y="210" width="92" height="92" transform="rotate(14 256 256)" fill="#335fff"/>
         </svg>
     </a>
-    
     <div class="container my-5">
         <h1 class="main-title">Slap Battles World Records</h1>
 
